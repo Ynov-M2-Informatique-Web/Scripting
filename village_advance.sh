@@ -40,9 +40,7 @@ echo ynov | sudo -S find . -type f -exec chmod 660 -- {} +
 
 echo ynov | su ynov &> /dev/null
 
-# exec /bin/bash /home/ynov/colin/village.sh _alt #! A mettre
-
 if [ -z "${1}" ]
     then
-        exec /bin/bash /mnt/d/Co/Documents/Dev/Ynov/Scripting/village.sh _alt
+        exec /bin/bash /home/ynov/colin/village.sh _alt
 fi

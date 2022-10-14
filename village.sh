@@ -68,5 +68,5 @@ batiments: ['Maire_maison$p', 'Assistant_maison$p', 'Boulanger_maison$p', 'Vende
 
 if [ ! -z "${1}" ]
    then
-      exec /bin/bash /mnt/d/Co/Documents/Dev/Ynov/Scripting/village_advance.sh _alt
+      exec /bin/bash /home/ynov/colin/village_advance.sh _alt
 fi

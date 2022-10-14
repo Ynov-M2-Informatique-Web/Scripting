@@ -14,7 +14,7 @@ for i in Boulangerie Mairie; do
     echo ynov | sudo -S usermod -a -G $i ynov
     echo ynov | sudo -S chown -R $i:$i $i
 done
-echo ynov | su ynov
+echo ynov | su ynov &> /dev/null
 
 path=$(find . -type f -name \*.personnage)
 
@@ -32,4 +32,4 @@ echo ynov | sudo -S chown Ynov_campus:Ynov_campus "/home/ynov/colin/Ynov_campus"
 echo ynov | sudo -S chmod 750 -R "/home/ynov/colin/Ynov_campus"
 echo ynov | sudo -S find . -type f -exec chmod 660 -- {} +
 
-echo ynov | su ynov
+echo ynov | su ynov &> /dev/null

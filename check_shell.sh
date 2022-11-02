@@ -20,7 +20,15 @@ time echo -n "afficher le nombre de répertoire | $(find -O3 / -type d | wc -l) 
 
 time echo -n "afficher la version du kernel | $(uname -r) | "
 
-time echo -n "afficher le nom du cpu | $(lscpu | grep 'Model name' | sed 's/Model name:[ \t]*//g') | "
+time echo -n "afficher le nom du cpu | $(cat /proc/cpuinfo | grep 'model name' | sed 's/model name[ \t]:[ \t]//g') | "
+
+time echo -n "afficher les variables d'environnment | $(printenv) | "
+
+time echo -n "créer le fichier random_text | $(touch random_text) | "
+
+time echo -n "ecrire dans random_text au moins 46076442 charactere | $(dd if=/dev/urandom of=random_text count=90 bs=1000000) | "
+
+time echo -n "afficher la taille du fichier en mode human_readeable | $(ls -lh random_text | cut -d " " -f5) | "
 
 echo -e '\033[0m'
 

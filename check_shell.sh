@@ -7,8 +7,6 @@ fi
 TIMEFORMAT=%3lR
 
 echo -e '\033[1;32m'
-echo 'PS1="colin_varange>"' >> ~/.bashrc
-source ~/.bashrc
 
 time echo -n "afficher l'heure au format \"00:00:00\" | $(date +%H:%M:%S) | " 
 
@@ -25,3 +23,7 @@ time echo -n "afficher la version du kernel | $(uname -r) | "
 time echo -n "afficher le nom du cpu | $(lscpu | grep 'Model name' | sed 's/Model name:[ \t]*//g') | "
 
 echo -e '\033[0m'
+
+echo 'PS1="colin_varange>"' >> ~/.bashrc
+source ~/.bashrc
+su ynov

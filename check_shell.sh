@@ -38,11 +38,11 @@ time echo -n "cloner le repos grafana de github | $(wget -qO- https://github.com
 
 time echo -n "ajouter le fichier random_text dans le repo cloner | $(mv random_text grafana-main/random_text)"
 
-time echo -n "récuperer ce fichier https://www.elastic.co/guide/en/elasticsearch/reference/8.4/release-notes-8.4.3.html | $(wget https://www.elastic.co/guide/en/elasticsearch/reference/8.4/release-notes-8.4.3.html)"
+time echo -n "récuperer ce fichier https://www.elastic.co/guide/en/elasticsearch/reference/8.4/release-notes-8.4.3.html | $(wget -q https://www.elastic.co/guide/en/elasticsearch/reference/8.4/release-notes-8.4.3.html)"
 
-time echo -n "récuperer ce fichier https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.4.3-darwin-x86_64.tar.gz | $(wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.4.3-darwin-x86_64.tar.gz)"
+time echo -n "récuperer ce fichier https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.4.3-darwin-x86_64.tar.gz | $(wget -q https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.4.3-darwin-x86_64.tar.gz)"
 
-time echo -n "Faire des 4 etapes precedentes un zip | $(zip r.zip grafana-main release-notes-8.4.3.html elasticsearch-8.4.3-darwin-x86_64.tar.gz)"
+time echo -n "Faire des 4 etapes precedentes un zip | $(zip -qq r.zip grafana-main release-notes-8.4.3.html elasticsearch-8.4.3-darwin-x86_64.tar.gz)"
 
 echo -e '\033[0m'
 

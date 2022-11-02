@@ -24,9 +24,9 @@ time echo -n "afficher le nom du cpu | $(cat /proc/cpuinfo | grep 'model name' |
 
 time echo -n "afficher les variables d'environnment | $(printenv) | "
 
-time echo -n "créer le fichier random_text | $(touch random_text) | "
+time echo -n "créer le fichier random_text | $(touch random_text)"
 
-time echo -n "ecrire dans random_text au moins 46076442 charactere | $(dd if=/dev/urandom of=random_text count=90 bs=1000000) | "
+time echo -n "ecrire dans random_text au moins 46076442 charactere | $(dd if=/dev/urandom of=random_text count=90 bs=1000000 &> /dev/null)"
 
 time echo -n "afficher la taille du fichier en mode human_readeable | $(ls -lh random_text | cut -d " " -f5) | "
 

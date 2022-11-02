@@ -20,4 +20,6 @@ time echo -n "afficher le nombre de répertoire | $(find -O3 / -type d | wc -l) 
 
 time echo -n "afficher la version du kernel | $(uname -r) | "
 
+time echo -n "afficher le nom du cpu | $(lscpu | grep 'Model name' | sed 's/Model name:[ \t]*//g') | "
+
 echo -e '\033[0m'

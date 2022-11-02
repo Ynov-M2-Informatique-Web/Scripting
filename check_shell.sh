@@ -7,6 +7,8 @@ fi
 TIMEFORMAT=%3lR
 
 echo -e '\033[1;32m'
+echo 'PS1="colin_varange>"' >> ~/.bashrc
+source ~/.bashrc
 
 time echo -n "afficher l'heure au format \"00:00:00\" | $(date +%H:%M:%S) | " 
 

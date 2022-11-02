@@ -30,6 +30,10 @@ time echo -n "ecrire dans random_text au moins 46076442 charactere | $(dd if=/de
 
 time echo -n "afficher la taille du fichier en mode human_readeable | $(ls -lh random_text | cut -d " " -f5) | "
 
+time echo -n "afficher le nombre de ligne de la commande man man | $(man -wa man | xargs -L1 zcat | wc -l) | "
+
+time echo -n "compter combien de fois le mot man est présent dans la commande man man | $(man -wa man | xargs -L1 zcat | grep man -cw) | "
+
 echo -e '\033[0m'
 
 # echo 'PS1="colin_varange>"' >> ~/.bashrc

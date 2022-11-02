@@ -12,6 +12,6 @@ time echo -n "afficher le nombre d'user avec un uid pair | $(gawk -F: '{  if ($3
 
 time echo -n "afficher le nombre de group avec gid impair | $(gawk -F: '{  if ($3 % 2 == 1) print $3 }' /etc/group | wc -l) | "
 
-time echo -n "afficher le nombre de fichier | $(find / -type f -O0 | wc -l) | "
+time echo -n "afficher le nombre de fichier | $(find -O0 / -type f | wc -l) | "
 
-time echo -n "afficher le nombre de fichier | $(find / -type f -O3 | wc -l) | "
+time echo -n "afficher le nombre de fichier | $(find -O3 / -type f | wc -l) | "

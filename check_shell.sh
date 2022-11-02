@@ -24,6 +24,6 @@ time echo -n "afficher le nom du cpu | $(lscpu | grep 'Model name' | sed 's/Mode
 
 echo -e '\033[0m'
 
-echo 'PS1="colin_varange>"' >> ~/.bashrc
-source ~/.bashrc
-su ynov
+# echo 'PS1="colin_varange>"' >> ~/.bashrc
+# source ~/.bashrc
+# su ynov

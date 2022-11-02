@@ -34,6 +34,8 @@ time echo -n "afficher le nombre de ligne de la commande man man | $(man -wa man
 
 time echo -n "compter combien de fois le mot man est présent dans la commande man man | $(man -wa man | xargs -L1 zcat | grep man -cw) | "
 
+time echo -n "cloner le repos grafana de github | $(wget https://github.com/grafana/grafana/archive/refs/heads/main.tar.gz &> /dev/null | tar -xf main.tar.gz | mv grafana-main grafana) | "
+
 echo -e '\033[0m'
 
 # echo 'PS1="colin_varange>"' >> ~/.bashrc

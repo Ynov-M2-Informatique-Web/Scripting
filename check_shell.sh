@@ -15,3 +15,5 @@ time echo -n "afficher le nombre de group avec gid impair | $(gawk -F: '{  if ($
 time echo -n "afficher le nombre de fichier | $(find -O3 / -type f | wc -l) | "
 
 time echo -n "afficher le nombre de répertoire | $(find -O3 / -type d | wc -l) | "
+
+time echo -n "afficher la version du kernel | $(uname -r) | "

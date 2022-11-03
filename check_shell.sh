@@ -52,7 +52,7 @@ time echo -n "afficher le path du lv rootp | $(lvdisplay | grep "LV Path" | sed 
 
 time echo -n "afficher le nombre de paquet perdu en ping 8.8.8.8 | $(ping -c 1 -q 8.8.8.8 | grep -oP '[\d+.,]+(?=% packet loss)') | "
 
-time echo -n "afficher si le flux entre la machine est 8.8.8.8 sur le port 443 est ouvert | $(ncat -zv -w 2 255.8.8.8 443 2>&1 | sed -n '2p' | sed 's/[ \t]*Ncat:[ \t]*//g' | sed 's/[ \t]*to.*$//g') | "
+time echo -n "afficher si le flux entre la machine est 8.8.8.8 sur le port 443 est ouvert | $(ncat -zv -w 2 8.8.8.8 443 2>&1 | sed -n '2p' | sed 's/[ \t]*Ncat:[ \t]*//g' | sed 's/[ \t]*to.*$//g') | "
 
 time echo -n "afficher l'heure \"00:00:00\" | $(date +%H:%M:%S) | "
 

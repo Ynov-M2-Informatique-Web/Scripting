@@ -1,3 +1,4 @@
 mkdir /trash
-echo 'alias remove="/usr/bin/rm"' >> /home/ynov/.bashrc
-echo 'alias rm="mv \\!* /trash"' >> /home/ynov/.bashrc
+echo 'alias remove="/usr/bin/rm"' >> /home/ynov/.bash_aliases
+echo 'alias rm="mv \\!* /trash"' >> /home/ynov/.bash_aliases
+exec bash

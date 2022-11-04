@@ -1,8 +1,11 @@
-a=$(($(stat -c %Z /trash/u.1667556237)+172800))
-r=$(($(date +%s) > $a))
+find -O3 /trash -type f | while read file; do 
+    a=$(($(stat -c %Z $file)+172800))
+    r=$(($(date +%s) > $a))
 
-if (($r == 1)); then
-    echo "true"
-else
-    echo "false"
-fi
+    if (($r == 1)); then
+        echo "remove $file"
+        remove $file
+    else
+        echo "no remove $file"
+    fi
+done

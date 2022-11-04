@@ -1,8 +1,13 @@
+// les fichiers doivent etre vieux d\'au moins 2 jours ainsi que son contenu
 find -O3 /trash -type f | while read file; do 
-    a=$(($(stat -c %Z $file)+172800))
-    r=$(($(date +%s) > $a))
+    timestamp2jourEnPlus=$(($(stat -c %Z $file)+172800))
+    fichierOld2Jour=$(($(date +%s) > $timestamp2jourEnPlus))
+    # rootFile=$(($(stat -c %U $file) == "root"))
 
-    if (($r == 1)); then
+    # echo $fichierOld2Jour
+    # echo $rootFile
+
+    if (($fichierOld2Jour == 1)); then
         echo "remove $file"
         remove $file
     else

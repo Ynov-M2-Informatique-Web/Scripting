@@ -6,7 +6,7 @@ echo $'rmm () {\n        sudo mv $1 /trash/$1.$(date +%s)\n}' >> /home/ynov/.bas
 (crontab -l 2>/dev/null; echo "0 * * * * /home/ynov/clean_trash.sh") | crontab -
 exec bash
 
-rm () {
+rmm () {
     fichierSup200=$(($(stat -c %s $1) > 209715200))
 
     if (($fichierSup200 == 1)); then
